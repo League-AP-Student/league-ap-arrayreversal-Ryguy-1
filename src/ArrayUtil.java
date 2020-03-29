@@ -1,5 +1,4 @@
-
-
+import java.util.ArrayList;
 
 public class ArrayUtil {
 	
@@ -9,7 +8,14 @@ public class ArrayUtil {
 	*   @param arr the array to manipulate
 	*/
 	public static void reverseArray(int[] arr){
-		/* code goes here */
+		ArrayList<Integer> ints = new ArrayList<Integer>();
+		for (int i = arr.length-1; i >= 0; i--) {
+			ints.add(arr[i]);
+		}
+		int[] reversed = new int[arr.length];
+		for (int i = 0; i < ints.size(); i++) {
+			reversed[i] = ints.get(i);
+		}
 	}
 }
 
