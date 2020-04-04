@@ -8,15 +8,17 @@ public class ArrayUtil {
 	*   @param arr the array to manipulate
 	*/
 	public static void reverseArray(int[] arr){
-		ArrayList<Integer> ints = new ArrayList<Integer>();
-		for (int i = arr.length-1; i >= 0; i--) {
-			ints.add(arr[i]);
+		
+		ArrayList<Integer> integerAL = new ArrayList<Integer>();
+		
+		for (int i = arr.length-1; i>=0; i--) {
+			integerAL.add(arr[i]);
 		}
-		int[] reversed = new int[arr.length];
-		for (int i = 0; i < ints.size(); i++) {
-			reversed[i] = ints.get(i);
+		for (int i = 0; i < arr.length; i++) {
+			arr[i]=integerAL.get(i);
 		}
-	}
+		
+}
 }
 
 class Matrix{
@@ -30,7 +32,10 @@ class Matrix{
 	*   Postcondition: The elements in each row have been reversed
 	*/
 	public void reverseAllRows(){
-		/* code goes here */
+		for (int[] arr: mat) {
+			ArrayUtil.reverseArray(arr);
+		}
+		
 	}
 	
 	/** Reverses the elements of mat.
@@ -43,10 +48,21 @@ class Matrix{
 	*     originally the first element.
 	*/
 	public void reverseMatrix(){
-		/* code goes here */
+		
+		ArrayList<Integer> ints = new ArrayList<Integer>();
+		
+		for (int[] arr: mat) {
+			ArrayUtil.reverseArray(arr);
+		}
+		
+		//NEED HELP PLEASE EXPLAIN
+		
+		
+		
 	}
 	
 	public int[][] getIntArray(){
 		return mat;
 	}
 }
+
